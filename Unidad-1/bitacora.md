@@ -33,3 +33,17 @@ Se usó IA para código. Algunos funcionamientos propuestos por ia se modificaro
 Producto final
 
 <img width="379" height="665" alt="Screenshot 2026-07-24 123819" src="https://github.com/user-attachments/assets/3be50ce0-a5f7-4120-9886-46c30308780a" />
+
+https://editor.p5js.org/Pascual890/full/IWwnmCvbo
+
+Autoevalueción
+
+Encargo completo: interpreto los cinco momentos dentro de un mismo sistema visual.	Cumplido
+
+Simulación con intención: utilizo al menos tres conceptos de la unidad para comunicar las ideas del encargo. Cumplido
+
+Interacción significativa: la interacción modifica el comportamiento o las probabilidades del sistema, que también funciona sin intervención.	Cumplido
+
+Prototipo funcional: la experiencia puede ejecutarse y recorrerse completa sin errores que impidan comprenderla.	Cumplido
+
+Proceso documentado: la bitácora evidencia avances, decisiones, dificultades, soluciones, uso de IA y enlace al prototipo. Cumplido
