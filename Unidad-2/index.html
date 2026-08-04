@@ -3,15 +3,34 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Proyecto p5.js básico</title>
+  <title>Atacar y protegerse</title>
   <link rel="stylesheet" href="style.css" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.8.0/p5.min.js"></script>
 </head>
 <body>
-  <main>
-    <h1>Proyecto p5.js básico</h1>
-    <p>Abre este archivo en tu navegador para ver el lienzo.</p>
-  </main>
+  <aside id="panel">
+    <h1>Atacar y protegerse</h1>
+    <p class="tension">Cada una persigue a una y huye de otra. Los dos vectores tiran en direcciones distintas: avanzar es dejar la espalda expuesta.</p>
+
+    <ul class="leyenda">
+      <li>
+        <span class="pt blo"></span> Bloque <b id="n-blo">—</b>
+        <input type="range" id="s-blo" min="0" max="600" step="1" value="306" />
+      </li>
+      <li>
+        <span class="pt gru"></span> Grupo <b id="n-gru">—</b>
+        <input type="range" id="s-gru" min="0" max="600" step="1" value="297" />
+      </li>
+      <li>
+        <span class="pt sol"></span> Solitario <b id="n-sol">—</b>
+        <input type="range" id="s-sol" min="0" max="600" step="1" value="297" />
+      </li>
+    </ul>
+
+    <p class="ayuda">
+      <b>R</b> reset · <b>espacio</b> pausa · <b>H</b> ocultar panel
+    </p>
+  </aside>
   <script src="sketch.js"></script>
 </body>
 </html>
