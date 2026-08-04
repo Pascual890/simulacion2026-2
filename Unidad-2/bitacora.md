@@ -2,6 +2,8 @@
 
 Unidad 2, actividad 05. Sistema generativo tipo Particle Life hecho en p5.js.
 
+https://editor.p5js.org/Pascual890/full/9zIdgg8IG
+
 ---
 
 ## La intención
@@ -38,8 +40,6 @@ Al escribir el sistema se me perdió una línea del dibujo y el fondo solo se bo
 
 ### Ensayo 2 - Se movía mucho pero no pasaba nada
 
-*(foto aquí)*
-
 Ya funcionaba y el movimiento no se acababa, pero se veía como una sopa: cientos de partículas culebreando por todos lados sin formar ningún grupo.
 
 **El problema:** el alcance con el que perseguían era 130 y el alcance con el que se juntaban con los suyos era 55. Como cada partícula sentía a todas las presas de su alrededor al mismo tiempo, las direcciones se promediaban y nadie alcanzaba a agruparse.
@@ -47,8 +47,6 @@ Ya funcionaba y el movimiento no se acababa, pero se veía como una sopa: ciento
 **La decisión:** igualar los dos alcances (95 para perseguir, 85 para juntarse) y bajar las velocidades máximas. Ahí aparecieron manadas.
 
 ### Ensayo 3 - Ya funciona
-
-*(foto aquí)*
 
 Con los alcances parecidos empiezan a verse grupos que se persiguen entre sí, con estelas paralelas que muestran hacia dónde van. Y aparece algo que no programé: **anillos**.
 
@@ -58,19 +56,18 @@ Pasa por dos razones. El anillo se forma porque los Bloques huyen del Solitario 
 
 Además, como los Solitarios no se buscan entre ellos, ninguno puede sacarlo de ahí. Lo que rompe la trampa es que llegue un Grupo, porque el Solitario huye de él y la simetría se quiebra.
 
-### Ensayo 4 - Bloque y Grupo eran lo mismo
+<img width="101" height="107" alt="Screenshot 2026-08-04 131020" src="https://github.com/user-attachments/assets/a2ff3bb9-ac03-46e8-b13a-9873e9da4f87" />
 
-*(foto aquí)*
+
+### Ensayo 4 - Bloque y Grupo eran lo mismo
 
 Al mirarlo me di cuenta de que Bloque y Grupo se veían iguales. Los medí y era cierto: la distancia entre compañeros era 7,8 y 6,5 píxeles, prácticamente lo mismo.
 
-**El problema:** yo los había diferenciado con la *fuerza* de la atracción (1,0 contra 0,6), y resulta que eso casi no importa. Lo que decide qué tan apretado queda un grupo es el radio de repulsión, no la fuerza de atracción. De hecho el Grupo, con la atracción más débil, quedaba más apretado, porque tenía el radio de repulsión más pequeño.
+**El problema:** yo los había diferenciado con la fuerza de la atracción (1,0 contra 0,6), y resulta que eso casi no importa. Lo que decide qué tan apretado queda un grupo es el radio de repulsión, no la fuerza de atracción. De hecho el Grupo, con la atracción más débil, quedaba más apretado, porque tenía el radio de repulsión más pequeño.
 
-**La decisión:** diferenciarlos por **escala** en vez de por fuerza. El Bloque se junta fuerte pero solo con lo que tiene muy cerca, así que hace cúmulos chiquitos y densos. El Grupo se junta flojo pero con lo que está lejos, así que hace nubes grandes y difusas. Ahora se distinguen por tamaño y forma, no solo por densidad.
+**La decisión:** diferenciarlos por escala en vez de por fuerza. El Bloque se junta fuerte pero solo con lo que tiene muy cerca, así que hace cúmulos chiquitos y densos. El Grupo se junta flojo pero con lo que está lejos, así que hace nubes grandes y difusas. Ahora se distinguen por tamaño y forma, no solo por densidad.
 
 ### Ensayo 5 - Los Solitarios se apilaban
-
-*(foto aquí)*
 
 Al principio los Solitarios eran completamente indiferentes entre ellos: ni se atraían ni se repelían. La idea era que fueran los únicos que van solos.
 
@@ -80,12 +77,17 @@ Al principio los Solitarios eran completamente indiferentes entre ellos: ni se a
 
 ### Ensayo 6 - Ajustes finales
 
-*(foto aquí)*
-
 Cosas que decidí al final:
 
 - Agregué deslizadores para cambiar la cantidad de cada tipo en vivo, sin reiniciar. Así puedo ver qué pasa si le quito casi todos los Bloques a una configuración que ya está formada, en vez de solo comparar entre corridas distintas.
 - Hice al Solitario un poco más gordo para poder seguirlo con la vista entre las masas.
+
+
+<img width="763" height="548" alt="Screenshot 2026-08-04 142559" src="https://github.com/user-attachments/assets/3c3fe117-9524-46a3-8f9a-3fdb3f9a4526" />
+
+<img width="779" height="481" alt="Screenshot 2026-08-04 142704" src="https://github.com/user-attachments/assets/a0db01de-0305-4b02-a41f-02528a1a9bc7" />
+
+<img width="740" height="559" alt="Screenshot 2026-08-04 142638" src="https://github.com/user-attachments/assets/b7b58036-0c11-4960-9ca1-b5f15e15c65f" />
 
 ---
 
