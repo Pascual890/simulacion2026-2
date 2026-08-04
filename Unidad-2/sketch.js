@@ -329,15 +329,20 @@ function integrar() {
 }
 
 function draw() {
-  // En vez de borrar el fondo, se le pasa un velo semitransparente por encima:
-  // lo dibujado antes se va apagando y quedan los rastros. No es decoración,
-  // hacen visible la trayectoria de la persecución, que es de lo que trata el
-  // sistema. El velo apunta a un color más oscuro que el fondo porque si
-  // apuntara al fondo exacto, el redondeo a enteros dejaría fantasmas
-  // permanentes de los primeros cuadros.
+  // Las estelas: en vez de borrar el lienzo entero cada cuadro, se le quita un
+  // poco de opacidad a lo ya dibujado, así lo anterior se va desvaneciendo.
+  // No es decoración: hace visible la trayectoria de la persecución, que es de
+  // lo que trata el sistema.
+  //
+  // Se BORRA (erase) en vez de pintar un velo oscuro encima. Pintando un velo,
+  // la mezcla se hace con enteros y en cuanto un píxel queda a menos de unas
+  // pocas unidades del color de fondo el redondeo deja de restar: se congela
+  // ahí y queda un dibujo fantasma permanente de todo lo que pasó. Borrando,
+  // la opacidad sí llega a cero y el fondo queda limpio.
   noStroke();
-  fill(5, 6, 9, 30);
+  erase(26);
   rect(0, 0, width, height);
+  noErase();
 
   if (!enPausa) {
     aplicarFuerzas();
