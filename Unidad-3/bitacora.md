@@ -6,6 +6,8 @@ Añadir otros tipos de fuerzas existentes para exploración. Nuevas formas y com
 
 Añadir parametros para el magnetismo y el resorte.
 
+Modificción de tiempos. La ia encontró que unos parametros iban mas rápido porque iban ligados a los fps, mi pc corre muy rápido, entonces los resultados eran más rápidos. Se arregló en el loop principal (main.js), antes se daba un paso de simulación por cada frame, ahora se acumula el tiempo real que pasó y se gasta en pasos fijos de 1/60 de segundo. Así siempre son 60 pasos por segundo, corra la pantalla a 60 o a 160 fps.
+
 Cambio de colores, añadir colores y cambiar los parámetros que van a modificar cada cosa
 
 
