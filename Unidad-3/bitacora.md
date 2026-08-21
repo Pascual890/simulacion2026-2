@@ -1,8 +1,49 @@
-# Bitacora U3
+# Bitácora U3
+
+
+## Controles
+
+En LAB las teclas de escena reinician el estado, para que cada prueba parta
+igual. En PERFORMANCE la misma tecla es un gesto sobre la nube en curso: no
+reinicia nada y el cambio llega de forma gradual.
+
+### Escenas
+
+| Tecla | Escena |
+|---|---|
+| 1 | Inercia |
+| 2 | Fuerza constante, hacia abajo |
+| 3 | Atracción |
+| 4 | Repulsión |
+| 5 | Vórtice |
+| 6 | Resorte a estructura |
+| 7 | Flujo (curl noise) |
+| 8 | Magnética |
+| 0 | Cohesión: resorte + flujo |
+| Q | Pulso radial |
+
+### Gestos en vivo
+
+| Control | Qué hace |
+|---|---|
+| Puntero | Mueve el atractor. Es el centro del radial, del vórtice y de las ondas |
+| Flechas arriba y abajo | Agrandan o encogen la estructura del resorte |
+| Flechas izquierda y derecha | Cambian la forma: esfera, anillo, rejilla, hélice |
+| Espacio | Invierte el radial mientras se mantenga presionado. Es la ruptura |
+| T | Cambia el tempo entre normal y lento |
+| Corchetes | Qué tan rápido llega el cambio de escena |
+
+### Modo
+
+| Tecla | Qué hace |
+|---|---|
+| P | Alterna entre LAB y PERFORMANCE |
+| R | Reinicia las partículas |
 
 
 
 ## Ficha de fuerzas
+
 
 Ocho fuerzas se suman en el mismo bloque de código, dentro de
 src/simulation/createSimulation.js. La única que se aplica aparte es la
@@ -174,10 +215,10 @@ juntar resorte con alguna fuerza de desorden, en este caso con el curl noise.
 
 | Criterio | Peso | Qué debe demostrar la evidencia | Valoración |
 |---|---|---|---|
-| **Trazabilidad y comprensión del sistema** | 25 | Puedo señalar y explicar estado, fuerzas, integración, render y controles; además puedo ubicar qué partes produjo o modificó la IA. | |
-| **Verificación del algoritmo de fuerzas** | 25 | Estudié en detalle el proyecto y aunque no comprenda toda la sintaxis, puedo identificar su arquitectura, sus partes, puedo aislar una fuerza central, formular una predicción, la ejecuté y ya analicé, comparé el resultado, cambié deliberadamente un signo o parámetro y expliqué la diferencia. | |
-| **Diseño de fuerzas e intención** | 20 | Las fuerzas y sus parámetros hacen perceptible una intención; el comportamiento surge de la dinámica y no de trayectorias previamente dibujadas. | |
-| **Instrumento, score e interpretación** | 15 | El score conecta la escucha con decisiones; escogí pocos controles expresivos y puedo conducir el sistema en vivo sin que el audio lo controle automáticamente. | |
-| **Experimentación y criterio frente a la IA** | 10 | Comparé alternativas, registré hallazgos y descartes, corregí propuestas de IA y puedo justificar por qué conservé la versión presentada. | |
-| **Entrega técnica y documentación** | 5 | La URL pública abre; la bitácora permite verificar el proceso. | |
+| **Trazabilidad y comprensión del sistema** | 25 | Puedo señalar y explicar estado, fuerzas, integración, render y controles; además puedo ubicar qué partes produjo o modificó la IA. | 4|
+| **Verificación del algoritmo de fuerzas** | 25 | Estudié en detalle el proyecto y aunque no comprenda toda la sintaxis, puedo identificar su arquitectura, sus partes, puedo aislar una fuerza central, formular una predicción, la ejecuté y ya analicé, comparé el resultado, cambié deliberadamente un signo o parámetro y expliqué la diferencia. | 3|
+| **Diseño de fuerzas e intención** | 20 | Las fuerzas y sus parámetros hacen perceptible una intención; el comportamiento surge de la dinámica y no de trayectorias previamente dibujadas. | 5|
+| **Instrumento, score e interpretación** | 15 | El score conecta la escucha con decisiones; escogí pocos controles expresivos y puedo conducir el sistema en vivo sin que el audio lo controle automáticamente. | 5|
+| **Experimentación y criterio frente a la IA** | 10 | Comparé alternativas, registré hallazgos y descartes, corregí propuestas de IA y puedo justificar por qué conservé la versión presentada. | 5|
+| **Entrega técnica y documentación** | 5 | La URL pública abre; la bitácora permite verificar el proceso. | 5|
 | **Total Puntos** | **100** | | |
